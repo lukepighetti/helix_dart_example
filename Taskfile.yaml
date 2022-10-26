@@ -1,0 +1,11 @@
+version: '3'
+
+tasks:
+  gen:
+    - rm -f out.dart
+    - dart gen.dart
+    - dart format out.dart
+    - echo "Run task open to open in Helix"
+
+  open:
+    - hx out.dart
